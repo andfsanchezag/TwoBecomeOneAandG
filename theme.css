@@ -23,15 +23,30 @@ html, body{
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(ellipse at center, #b1b1b1 60%, #fff 100%);
-  transition: background-image 1s ease;
+  overflow: hidden;
+}
+
+/* Fondo difuminado para rellenar bordes */
+.carousel-bg .blur-bg {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  filter: blur(30px);
+  transform: scale(1.1); /* expande para que el blur no deje bordes negros */
+  z-index: 0;
 }
+
+/* Imagen nítida y centrada */
+.carousel-bg .main-bg {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
 
 .heading {
   position: relative;

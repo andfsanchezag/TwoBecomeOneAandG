@@ -10,13 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-   <header class="header">
-  <div class="carousel-bg"></div>
-  <h1 class="heading">
-    Geraldyn & Andrés
-    <span class="heading-subtext">are getting married!</span>
-  </h1>
-</header>
+    <header class="header">
+      <div class="carousel-bg">
+        <div class="blur-bg"></div>
+        <div class="main-bg"></div>
+      </div>
+      <h1 class="heading">
+        Geraldyn & Andrés
+        <span class="heading-subtext">are getting married!</span>
+      </h1>
+    </header>
+    
     <a data-scroll class="fixed-button" href="#rsvp" id="rsvpButton">Confirmanos tu asistencia</a> 
     <section class="section">
       <h2 class="sub-heading">The beginning of our story</h2>
@@ -108,30 +112,27 @@ sobrecito de amor</p>
     <script>
   // Lista de rutas a tus imágenes
   const images = [
-    './img/IMG_2052.jpg',
-    './img/nosotors2.1.png',
-    './img/IMG_1941.jpeg'
-  ];
+  './img/IMG_2052.jpg',
+  './img/IMG_2052.jpg',
+  './img/IMG_1941.jpeg'
+];
 
-  let current = 0;
-  const carouselBg = document.querySelector('.carousel-bg');
+let current = 0;
+const blurBg = document.querySelector('.blur-bg');
+const mainBg = document.querySelector('.main-bg');
 
-  // Función para actualizar el fondo
-  function showImage(index) {
-    carouselBg.style.backgroundImage = `
-      url('${images[index]}'),
-      radial-gradient(ellipse at center, #b1b1b1 60%, #fff 100%)
-    `;
-  }
+function showImage(index) {
+  const url = `url('${images[index]}')`;
+  blurBg.style.backgroundImage = url;
+  mainBg.style.backgroundImage = url;
+}
 
-  // Inicialización
+showImage(current);
+
+setInterval(() => {
+  current = (current + 1) % images.length;
   showImage(current);
-
-  // Cambio automático cada 5 segundos
-  setInterval(() => {
-    current = (current + 1) % images.length;
-    showImage(current);
-  }, 5000);
+}, 5000);
 </script>
   </body>
 </html>
