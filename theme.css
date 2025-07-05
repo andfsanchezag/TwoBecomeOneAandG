@@ -123,6 +123,36 @@ html, body{
   color: #0a0a0ac9;
   display: block;
   font-size: .4em;
+  text-shadow: none; 
+}
+
+.heading-img {
+  position: absolute;         /* Posicionamiento absoluto respecto al contenedor padre */
+  bottom: 2em;                /* Espacio desde la parte inferior */
+  left: 50%;                  /* Centro horizontal */
+  transform: translateX(-50%); /* Corrige el centro */
+  text-align: center;
+  color: #0a0a0ac9;
+  display: block;
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+  font-weight: normal;
+  text-shadow: 0 0 10px #000;
+  z-index: 2; /* Asegura que se muestre sobre el fondo */
+}
+
+.heading-img-subtext {
+  color: #0a0a0ac9;
+  display: block;
+  font-size: .4em;
+  text-shadow: none; 
+}
+
+.heading-card-subtext:last-child {
+  display: inline-block;
+  margin-top: 1em; /* ajusta el espacio según lo necesites */
+  text-decoration: underline; /* opcional, para destacar el enlace */
+  cursor: pointer; /* opcional, mejora la experiencia de usuario */
 }
 .fixed-button{
     background: rgba(20,20,20,.5);
