@@ -99,7 +99,7 @@ html, body{
 }
 
 .heading-card {
-    color: #ffffff;
+    color:  #0a0a0ac9;
     display: block;
     font-family: 'Caveat', cursive;
     font-size: 6em;
@@ -109,7 +109,7 @@ html, body{
 .heading-card-subtext{
     color: #0a0a0ac9;
     display: block;
-    font-size: .6em;
+    font-size: .3em;
 }
 .fixed-button{
     background: rgba(20,20,20,.5);
