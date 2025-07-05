@@ -89,6 +89,29 @@ html, body{
     font-family: 'Caveat', cursive;
     font-size: .6em;
 }
+
+
+.heading-card {
+  position: relative;
+  
+  color: #dfc536b9;
+  text-align: center;
+}
+
+.heading-card {
+    color: #0a0a0ac9;
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: 6em;
+    font-weight: normal;
+   text-shadow: 0 0 10px #000;
+}
+.heading-card-subtext{
+    color: #0a0a0ac9;
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: .6em;
+}
 .fixed-button{
     background: rgba(20,20,20,.5);
     border-radius: 1em;
