@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nos llena de alegría compartir este momento tan especial contigo.!</title>
+    <link rel="stylesheet" type="text/css" href="theme.css"> 
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Emmanuella Sanchez" />
+    <meta property="og:description" content="Nos llena de alegría compartir este momento tan especial contigo.!" />
+    <meta property="og:image" content="https://andfsanchezag.github.io/TwoBecomeOneAandG/img/Emmanuella.jpg" />
+    <meta property="og:url" content="https://andfsanchezag.github.io/TwoBecomeOneAandG/EmmanuellaS.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Compatibilidad con Twitter/WhatsApp -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://card.com.img/imagen-card.jpg" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="carousel-bg">
+        <div class="blur-bg"></div>
+        <div class="main-bg"></div>
+      </div>
+      <h1 class="heading-card">
+        Emmanuella Sanchez
+        <span class="heading-card-subtext">Un sí para siempre…</span>
+        <span class="heading-card-subtext">y tú estás invitado a ser parte de este gran día!</span>
+        <a href="./index.html" class="heading-card-subtext">¡Haz clic aqui!</a>
+
+      </h1>
+    </header>
+   
+    <script src="./js/smooth-scroll.polyfills.min.js"></script>
+    <script defer>
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var rsvpButton = document.getElementById('rsvpButton')
+      rsvpButton.addEventListener('click',hideButton,false);
+
+      function hideButton() {
+        rsvpButton.style.display = 'none';
+      }   
+    </script>
+    <script>
+  // Lista de rutas a tus imágenes
+  const images = [
+  './img/inicio.jpeg'
+];
+
+let current = 0;
+const blurBg = document.querySelector('.blur-bg');
+const mainBg = document.querySelector('.main-bg');
+
+function showImage(index) {
+  const url = `url('${images[index]}')`;
+  blurBg.style.backgroundImage = url;
+  mainBg.style.backgroundImage = url;
+}
+
+showImage(current);
+
+setInterval(() => {
+  current = (current + 1) % images.length;
+  showImage(current);
+}, 5000);
+</script>
+  </body>
+</html>
