@@ -106,7 +106,7 @@ html, body{
 
 .heading-card {
   position: absolute;         /* Posicionamiento absoluto respecto al contenedor padre */
-  bottom: 1em;                /* Espacio desde la parte inferior */
+  bottom: 2em;                /* Espacio desde la parte inferior */
   left: 50%;                  /* Centro horizontal */
   transform: translateX(-50%); /* Corrige el centro */
   text-align: center;
