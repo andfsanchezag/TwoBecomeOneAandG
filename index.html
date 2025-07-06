@@ -65,10 +65,38 @@ El dia puede ser frio, te sugerimos considerar llevar abrigo para tu comodidad.
 
 Al tratarse de una ceremonia cristiana, te pedimos vestir con recato y discreción.
 
-Agradecemos que optes por colores pasteles o sobrios. Las damas deberán asistir con vestido de gala y los caballeros de smoking.
+Agradecemos que optes por colores sobrios. Las damas deberán asistir con vestido de gala y los caballeros de traje.
 
 
     </p>
+    <div class="vestimenta-container">
+  <button class="toggle-button" onclick="toggleCarousel('hombresCarousel')">
+    Ejemplo de vestimenta hombres
+  </button>
+  <div class="carousel-wrapper" id="hombresCarousel">
+    <div class="carousel" id="hombresImages">
+      <img src="img/hombres1.jpg" alt="Ejemplo hombre 1">
+      <img src="img/hombres2.jpg" alt="Ejemplo hombre 2">
+      <img src="img/hombres3.jpg" alt="Ejemplo hombre 3">
+      <img src="img/hombres4.jpg" alt="Ejemplo hombre 4">
+
+    </div>
+  </div>
+
+  <button class="toggle-button" onclick="toggleCarousel('mujeresCarousel')">
+    Ejemplo de vestimenta mujeres
+  </button>
+  <div class="carousel-wrapper" id="mujeresCarousel">
+    <div class="carousel" id="mujeresImages">
+      <img src="img/mujeres1.jpg" alt="Ejemplo mujer 1">
+      <img src="img/mujeres2.jpg" alt="Ejemplo mujer 2">
+      <img src="img/mujeres3.jpg" alt="Ejemplo mujer 3">
+      <img src="img/mujeres4.jpg" alt="Ejemplo mujer 4">
+      <img src="img/mujeres5.jpg" alt="Ejemplo mujer 5">
+
+    </div>
+  </div>
+</div>
 </div>
 <div class="details">
         <i class="fas fa-gift"></i>
@@ -125,6 +153,10 @@ function showImage(index) {
   const url = `url('${images[index]}')`;
   blurBg.style.backgroundImage = url;
   mainBg.style.backgroundImage = url;
+}
+function toggleCarousel(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
 }
 
 showImage(current);

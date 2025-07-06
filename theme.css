@@ -237,6 +237,62 @@ html, body{
   margin-right: 8px;
 }
 
+.vestimenta-container {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 1em;
+  text-align: center;
+}
+
+.toggle-button {
+  background-color: #f7c9d3;
+  color: #222;
+  font-weight: bold;
+  border: none;
+  padding: 1em 1.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1.1em;
+}
+
+.toggle-button:hover {
+  background-color: #e895a7;
+}
+
+.carousel-wrapper {
+  display: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 2em;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  padding: 1em 0;
+}
+
+.carousel img {
+  max-height: 300px;
+  width: auto;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel img {
+    max-height: 200px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 4em;
